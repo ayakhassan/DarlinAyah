@@ -1,0 +1,12 @@
+/* globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optionally, some global styling */
+body {
+  @apply bg-pink-100;
+  margin: 0;
+  padding: 0;
+}
