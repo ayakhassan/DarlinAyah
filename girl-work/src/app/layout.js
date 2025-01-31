@@ -1,26 +1,22 @@
 // app/layout.js
-import NavBar from "./components/NavBar";
+import "./globals.css";
+import React from "react"; // for JSX if you're not using the new JSX transform
 
 export const metadata = {
-    title: "Girly MySpace",
-    description: "A super-pink MySpace-style site made with Next.js!",
-  };
-  
-  export default function RootLayout({ children }) {
-    return (
-      <html lang="en">
-        <head>
-          {/* Google Font: Dancing Script */}
-          <link
-            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
-            rel="stylesheet"
-          />
-        </head>
-        <body className="font-cursive bg-pink-100 text-pink-800 min-h-screen">
-          <NavBar />
-          {children}
-        </body>
-      </html>
-    );
-  }
-  
+  title: "Girly MySpace",
+  description: "A super-pink Next.js site!",
+};
+
+// Layout: wraps every page in your app folder
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className="bg-pink-100 text-pink-800 antialiased">
+        {/* Optional NavBar if you want it globally */}
+        {/* <NavBar /> */}
+
+        {children}
+      </body>
+    </html>
+  );
+}

@@ -1,6 +1,4 @@
-// app/components/NavBar.js
 "use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -8,28 +6,24 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-pink-500 p-4 flex justify-center space-x-6">
+    <nav className="bg-pink-500 p-4 flex justify-center gap-6">
       <Link
-        href="/"
-        className={`text-white hover:text-pink-200 text-xl ${
-          pathname === "/" ? "underline" : ""
-        }`}
+        href="/about"
+        className={`
+          text-white hover:text-pink-200 text-xl
+          ${pathname === "/about" ? "underline" : ""}
+        `}
       >
-        My Profile
+        About Me
       </Link>
       <Link
         href="/game"
-        className={`text-white hover:text-pink-200 text-xl ${
-          pathname === "/game" ? "underline" : ""
-        }`}
+        className={`
+          text-white hover:text-pink-200 text-xl
+          ${pathname === "/game" ? "underline" : ""}
+        `}
       >
-        Play Game
-      </Link>
-      <Link
-        href="/password"
-        className="text-white hover:text-pink-200 text-xl"
-      >
-        Password Gate
+        Bevo Game
       </Link>
     </nav>
   );

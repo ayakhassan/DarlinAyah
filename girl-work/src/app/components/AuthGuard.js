@@ -1,26 +1,24 @@
-// app/components/AuthGuard.js
 "use client";
-
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function AuthGuard({ children }) {
-  const [isAuthorized, setIsAuthorized] = useState(null);
+  const [isUnlocked, setIsUnlocked] = useState(null);
   const router = useRouter();
 
   useEffect(() => {
-    const passwordCheck = localStorage.getItem("site_unlocked");
-    // If not set or false, redirect to /password
-    if (passwordCheck !== "true") {
+    const unlocked = localStorage.getItem("site_unlocked");
+    if (unlocked !== "true") {
+      // If not unlocked, go back to /password
       router.push("/password");
     } else {
-      setIsAuthorized(true);
+      setIsUnlocked(true);
     }
   }, [router]);
 
-  // While we check localStorage, don't render the protected content yet
-  if (!isAuthorized) return null;
+  // While checking localStorage, render nothing (or a loader)
+  if (!isUnlocked) return null;
 
-  // If authorized is true, render children
+  // If unlocked, render the protected content
   return <>{children}</>;
 }
