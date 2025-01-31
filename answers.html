@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Answers</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Custom styles for the answers page */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f9f9f9; /* Fallback background */
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #8b7355; /* Dark brown */
+      color: white;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      z-index: 2; /* Ensure sidebar is above the notebook background */
+    }
+
+    .notebook-background {
+      flex-grow: 1;
+      margin-left: 250px; /* Offset by sidebar width */
+      background-image: url('assets/images/answers-cover.jpg'); /* Add your notebook image here */
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      padding: 40px;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1; /* Ensure notebook background is below the sidebar */
+    }
+
+    .answers-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for readability */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .answers-content h2 {
+      color: #8b7355; /* Dark brown heading */
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .answers-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555; /* Dark gray text */
+      font-family: 'Courier New', Courier, monospace; /* Handwritten-style font */
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="assets/images/profile-pic.jpg" alt="Your Profile Picture" class="profile-pic">
+    <h1>Ayah Hassan</h1>
+    <p>welcome to my space    
+        ㅤ♡
+    </p>
+    <ul>
+      <li><a href="index.html">Back to Home</a></li>
+    </ul>
+  </div>
+
+  <!-- Notebook Background and Answers Content -->
+  <div class="notebook-background">
+    <div class="answers-content">
+      <h2>Application Answers</h2>
+      <p>
+        ✦ Question 1: Your answer here. <br>
+        ✦ Question 2: Your answer here. <br>
+        ✦ Question 3: Your answer here. <br>
+        ✦ Question 4: Your answer here. <br>
+        ✦ Question 5: Your answer here. <br>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

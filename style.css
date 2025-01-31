@@ -1,0 +1,362 @@
+/* General Styles */
+body {
+    font-family: 'Tangerine', cursive, sans-serif; /* Retro font */
+    background: #ffccf5; /* Light pink background */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Music Player Container */
+  #music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background: #ff66b2; /* Bright pink */
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ff1a8c; /* Darker pink border */
+  }
+  
+  /* Music Icon */
+  #music-icon {
+    font-size: 24px;
+    color: #fff; /* White icon */
+    margin-right: 10px;
+    text-shadow: 2px 2px #ff1a8c; /* Pink shadow */
+  }
+  
+  /* Play/Pause Button */
+  #play-pause-btn {
+    background: #ff1a8c; /* Dark pink */
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+  }
+  
+  #play-pause-btn:hover {
+    background: #ff0066; /* Brighter pink on hover */
+  }
+  
+  /* Progress Bar */
+  #progress-bar {
+    width: 150px;
+    margin: 0 10px;
+    appearance: none; /* Remove default styling */
+    background: #ff99cc; /* Light pink track */
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  #progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #ff1a8c; /* Dark pink thumb */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Time Display */
+  #current-time, #total-time {
+    font-size: 14px;
+    color: #fff; /* White text */
+    text-shadow: 1px 1px #ff1a8c; /* Pink shadow */
+  }
+  /* Sparkly Effect */
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5); }
+  }
+  
+  #music-player::before {
+    content: "✨";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 20px;
+    animation: sparkle 2s infinite;
+  }
+  
+  #music-player::after {
+    content: "✨";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    font-size: 20px;
+    animation: sparkle 2s infinite 1s; /* Delay the second sparkle */
+  }
+  /* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('assets/images/diary-cover.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Tangerine',cursive;
+  }
+  
+  /* Diary Cover Container */
+  .diary-cover {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .diary-cover h1 {
+    font-size: 36px;
+    color: #8b4513; /* Brown color for a diary feel */
+    margin-bottom: 10px;
+  }
+  
+  .diary-cover p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Password Input */
+  #passwordInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #d87ba8; /*Pink boarder */
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 200px;
+  }
+  
+  /* Unlock Button */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #d87ba8; /* Brown background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background: #3f1602; /* Darker brown on hover */
+  }
+  
+  /* Error Message */
+  #errorMessage {
+    margin-top: 10px;
+  }
+  
+  /* Apply the font */
+body {
+    font-family: 'Tangerine', sans-serif;
+  }
+  
+  .diary-cover h1 {
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+    font-size: 50px;
+    color: #451f03;
+    margin-bottom: 10px;
+  }
+  
+  .diary-cover p {
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    color: #333;
+  }
+  /* Profile Container */
+.profile-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+  }
+  
+  .profile-container h1 {
+    font-size: 72px;
+    color: #8b4513; /* Brown color for a vintage feel */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-pic {
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    border-radius: 50%; /* Circular profile picture */
+    border: 5px solid #d87ba8; /* Pink border */
+    margin-bottom: 20px;
+  }
+  
+  /* Sections */
+  .about-me, .hobbies, .favorite-music {
+    margin-bottom: 30px;
+  }
+  
+  .about-me h2, .hobbies h2, .favorite-music h2 {
+    font-size: 48px;
+    color: #8b4513;
+    margin-bottom: 10px;
+  }
+  
+  .about-me p, .hobbies ul, .favorite-music ul {
+    font-size: 32px;
+    color: #333;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .hobbies ul, .favorite-music ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+  }
+  
+  .hobbies li, .favorite-music li {
+    margin-bottom: 10px;
+  }
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Soft white background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: #555; /* Dark gray text */
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #8b7355; /* Dark brown */
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar img.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #f4c2c2; /* Pale pink border */
+    margin-bottom: 20px;
+  }
+  
+  .sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f4c2c2; /* Pale pink */
+  }
+  
+  .sidebar p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #e0f7fa; /* Light green */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: #e0f7fa; /* Light green text */
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #f4c2c2; /* Pale pink on hover */
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 250px; /* Offset by sidebar width */
+    padding: 40px;
+    width: calc(100% - 250px);
+    background-color: white; /* White background */
+  }
+  
+  .main-content section {
+    margin-bottom: 40px;
+  }
+  
+  .main-content h2 {
+    color: #8b7355; /* Dark brown headings */
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .main-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555; /* Dark gray text */
+  }
+  
+  /* Music Player */
+  .music-player {
+    background-color: #e0f7fa; /* Light green background */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #d0e0e3; /* Subtle border */
+  }
+  
+  .player-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #play-pause-btn {
+    background-color: #8b7355; /* Dark brown button */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #play-pause-btn:hover {
+    background-color: #f4c2c2; /* Pale pink on hover */
+  }
+  
+  #progress-bar {
+    flex-grow: 1;
+    cursor: pointer;
+  }
+  
+  #current-time, #total-time {
+    font-size: 14px;
+    color: #555; /* Dark gray text */
+  }
+  
+
+ 
+  

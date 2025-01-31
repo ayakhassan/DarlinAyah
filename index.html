@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Left Section: Profile -->
+    <div class="profile-section">
+      <img src="assets/images/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+      <h1>Ayah Hassan</h1>
+      <p class="tagline">welcome to my space</p>
+      <div class="profile-details">
+        <p><strong>Birthday:</strong> 05/05</p>
+        <p><strong>MBTI:</strong> ENTP</p>
+        <p><strong>Major:</strong> Computer Science</p>
+        <p><strong>Year:</strong> Sophomore</p>
+      </div>
+      <ul class="social-links">
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-spotify"></i></a></li>
+      </ul>
+    </div>
+
+    <!-- Right Section: Content -->
+    <div class="content-section">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Write a fun and engaging bio here. Add some retro flair!</p>
+      </section>
+
+      <section id="playlist">
+        <h2>My Playlist</h2>
+        <div class="music-player">
+          <div class="player-controls">
+            <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+            <input type="range" id="progress-bar" value="0">
+            <span id="current-time">0:00</span> / <span id="total-time">0:00</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Add a fun contact form or your social media links here.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="background-music">
+    <source src="assets/music/oh-darling.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
